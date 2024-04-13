@@ -48,3 +48,48 @@
     console.log(flyintype)
     const normalPkmn = pokémon.filter( p => p.types.includes("normal")).length;
     console.log(normalPkmn)
+
+
+
+
+    // ***************************************************************************
+    // 1. Array of pokemon objects where id is evenly divisible by 3
+const pokemonDivisibleByThree = pokemon.filter(pokemon => pokemon.id % 3 === 0);
+
+// 2. Array of pokemon objects that are "fire" type
+const fireTypePokemon = pokemon.filter(pokemon => pokemon.types.includes("fire"));
+
+// 3. Array of pokemon objects that have more than one type
+const multiTypePokemon = pokemon.filter(pokemon => pokemon.types.length > 1);
+
+// 4. Array with just the names of the pokemon
+const pokemonNames = pokemon.map(pokemon => pokemon.name);
+
+// 5. Array with names of pokemon with id greater than 99
+const highIdNames = pokemon.filter(pokemon => pokemon.id > 99).map(pokemon => pokemon.name);
+
+// 6. Names of pokemon whose only type is poison
+const singlePoisonType = pokemon.filter(pokemon => pokemon.types.length === 1 && pokemon.types[0] === "poison").map(pokemon => pokemon.name);
+
+// 7. Array containing just the first type of all pokemon whose second type is "flying" 
+const firstTypeFlyingSecond = pokemon
+  .filter(pokemon => pokemon.types.length === 2 && pokemon.types[1] === "flying")
+  .map(pokemon => pokemon.types[0]);
+
+// 8. Count of normal type pokemon
+const normalTypeCount = pokemon.filter(pokemon => pokemon.types.includes("normal")).length;
+
+console.log(pokemonDivisibleByThree);
+console.log(fireTypePokemon);
+console.log(multiTypePokemon);
+console.log(pokemonNames);
+console.log(highIdNames);
+console.log(singlePoisonType);
+console.log(firstTypeFlyingSecond);
+console.log(normalTypeCount);
+
+// ************************************************************************
+//                             Challenge Section
+// ************************************************************************
+
+// 9. Create a function called `evolvesTo` that takes in a pokemon name as an argument and returns an array of all the pokemon that evolve from this
