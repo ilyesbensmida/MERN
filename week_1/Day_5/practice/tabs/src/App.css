@@ -1,0 +1,55 @@
+.tabs {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.tabs-header {
+  display: flex;
+  list-style: none;
+  padding: 10px 15px;
+  margin: 0;
+  border-bottom: 2px solid #260d94;
+}
+
+.tabs-header-item {
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -moz-transition: background-color 0.3s ease-in-out;
+  -ms-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+}
+
+.tabs-header-item.active {
+  background-color: #f5f5f5;
+}
+
+.tabs-content {
+  padding: 20px;
+}
+
+.tabs-content-item {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+}
+
+.tabs-content-item.active {
+  opacity: 1;
+}
+
+.tabs-content-item.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+  -webkit-transition: opacity 0.3s ease-out;
+  -moz-transition: opacity 0.3s ease-out;
+  -ms-transition: opacity 0.3s ease-out;
+  -o-transition: opacity 0.3s ease-out;
+}
